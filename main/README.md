@@ -44,4 +44,7 @@ duplicated names if we have indexes in the normalized names and linkedin_url.
 For the 20.000 records being created or updated daily, I'll assume there're 
 not that many duplicates in terms of company names. The urls will be 
 automatically solved, and the possible name duplicates should be manually 
-solved.
+solved. If there're indeed too many possible duplicates per day and the 
+manual moderation turns out to be a bottleneck then we'll need to decide a
+tradeoff between more automatic company merging (maybe using natural language
+processing) or more moderators.
