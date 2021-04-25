@@ -31,9 +31,17 @@ so any possible duplicate should not be added, nor it's associated data. It
    proper indexes to search for duplicates.
    
 The possibility of creating a new company and associating records to it when
-it's a duplicate sounds like too much risk to build any automated solution. I
-would keep this possible duplicates in a different table or datasource, then
+it's a duplicate sounds like too much risk to build any automated solution for.
+I would keep this possible duplicates in a different table or datasource, then
 create a UI for moderators to view the possible duplicates, review their 
 company data, and allow then to merge to an existing company or create a new
 one. In any case, each moderator decision would run a single import with both
 the company data and related data associated with it.
+
+In terms of data size, 1 million records it's not a problem to search for 
+duplicated names if we have indexes in the normalized names and linkedin_url.
+
+For the 20.000 records being created or updated daily, I'll assume there're 
+not that many duplicates in terms of company names. The urls will be 
+automatically solved, and the possible name duplicates should be manually 
+solved.
